@@ -16,5 +16,7 @@ Instagram posts clone built with Node.js, Express, EJS
 - UUID
 
 ## How to run
-npm install
+npm install ; 
 npm run dev
+
+Author : Sachin Das
