@@ -1,0 +1,17 @@
+body {
+  background-color: #fff5f5;
+  font-family: sans-serif;
+}
+.main {
+  background-color: #ffffff; /* Post card — pure white */
+  border: 5px solid #dbdbdb; /* Insta border — light grey */
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(255, 0, 115, 0.1);
+  max-width: 470px;
+  margin: 10px auto;
+  padding-left: 5%;
+  padding-bottom: 2%;
+}
+.username {
+  font-style: italic;
+}

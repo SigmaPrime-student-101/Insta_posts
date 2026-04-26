@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Edit your post</h2>
+    <p>Post Username : @<%=post.username%>
+    </p>
+    <p>Post id :<%=post.id%>
+    </p>
+    <form method="POST" action="/ig/<%= post.id %>?_method=PATCH">
+
+        <label>New Image URL:</label>
+        <input type="text" name="image" value="<%= post.image %>">
+
+        <label>Caption:</label>
+        <input type="text" name="caption" value="<%= post.caption %>">
+
+        <button>Update</button>
+    </form>
+
+</body>
+
+</html>

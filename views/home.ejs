@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insta_Posts</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <h2>Insta_Posts</h2>
+    <HR />
+    <br>
+    <br>
+    <button><a href="http://localhost:8000/ig/new">Create New Post</a></button>
+    <% for(post of posts){ %>
+        <div class="main" id="<%= post.id %>">
+            <h3 class="username">@<%=post.username%>
+            </h3>
+            <img src="<%= post.image %>" style="width: 300px; border-radius: 10px;">
+            <p>Caption : <%=post.caption%>
+            </p>
+
+            <form method="POST" action="/ig/<%= post.id %>/like?_method=PATCH">
+                <button>❤️ Like <%= post.likes %></button>
+            </form>
+            <br>
+            <a href="http://localhost:8000/ig/<%=post.id%>">Show Post</a> &nbsp;
+            <a href="http://localhost:8000/ig/<%=post.id%>/edit">Edit</a>
+            <br><br>
+            <form method="POST" action="/ig/<%= post.id %>?_method=DELETE">
+                <button>Delete</button>
+            </form>
+
+        </div>
+
+        <%}%>
+
+</body>
+
+</html>
